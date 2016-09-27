@@ -154,7 +154,7 @@
     Condition="'$(OutputType)' == 'Exe'
       And '$(ComputedPlatform)' == 'iPhone'
       And '$(BuildIpa)' == 'true'">
-    <Move
+    <Copy
       SourceFiles="$(IpaPackagePath)"
       DestinationFolder="$(OutputPath)"
     />

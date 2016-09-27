@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -45,7 +46,7 @@ namespace CoffeeTip.ViewModel
 
 					if (value)
 					{
-						DependencyService.Get<ITelemetry>().TrackEvent("Starbucks");
+						DependencyService.Get<ITelemetry>().TrackEvent("Starbucks", new Dictionary<string, string> { { "total", Total.ToString("N") }, { "tip", TipAmount.ToString("N") } });
 					}
 				}
             }
