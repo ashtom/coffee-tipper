@@ -46,5 +46,7 @@
 	<false/>
 	<key>CFBundleName</key>
 	<string>Coffee Tip</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>New Entry</string>
 </dict>
 </plist>

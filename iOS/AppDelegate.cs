@@ -45,5 +45,15 @@ namespace CoffeeTip.iOS
             return base.FinishedLaunching(app, options);
         }
     }
+
+	[Register("CoffeeApplication")]
+	public class CoffeeApplication : UIApplication
+	{
+		public override void MotionBegan(UIEventSubtype motion, UIEvent evt)
+		{
+			if (motion == UIEventSubtype.MotionShake)
+				BITHockeyManager.SharedHockeyManager.FeedbackManager.ShowFeedbackComposeViewWithGeneratedScreenshot();
+		}
+	}
 }
 
