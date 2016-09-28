@@ -121,6 +121,8 @@ namespace CoffeeTip.ViewModel
                         else
                             TipAmount = .5M;
                         break;
+					case 4:
+						throw new Exception("No coffee for you");
                 }
             }
 
