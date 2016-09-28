@@ -47,6 +47,6 @@
 	<key>CFBundleName</key>
 	<string>Coffee Tip</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>New Entry</string>
+	<string>The photo library is accessed when you want to provide feedback to the app developer.</string>
 </dict>
 </plist>
