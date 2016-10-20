@@ -44,7 +44,7 @@
     <CodesignKey>iPhone Distribution: Bit Stadium GmbH</CodesignKey>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <BuildIpa>true</BuildIpa>
-    <CodesignProvision>12ceae2f-9af6-4ae3-9282-9ba9886c82d6</CodesignProvision>
+    <CodesignProvision>Automatic:InHouse</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -150,13 +150,7 @@
     </CreateIpaDependsOn>
   </PropertyGroup>
 
-  <Target Name="CopyIpa"
-    Condition="'$(OutputType)' == 'Exe'
-      And '$(ComputedPlatform)' == 'iPhone'
-      And '$(BuildIpa)' == 'true'">
-    <Copy
-      SourceFiles="$(IpaPackagePath)"
-      DestinationFolder="$(OutputPath)"
-    />
+  <Target Name="CopyIpa" Condition="'$(OutputType)' == 'Exe'&#xA;      And '$(ComputedPlatform)' == 'iPhone'&#xA;      And '$(BuildIpa)' == 'true'">
+    <Copy SourceFiles="$(IpaPackagePath)" DestinationFolder="$(OutputPath)" />
   </Target>
 </Project>
