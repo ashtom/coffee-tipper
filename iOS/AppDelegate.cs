@@ -52,7 +52,10 @@ namespace CoffeeTip.iOS
 		public override void MotionBegan(UIEventSubtype motion, UIEvent evt)
 		{
 			if (motion == UIEventSubtype.MotionShake)
-				BITHockeyManager.SharedHockeyManager.FeedbackManager.ShowFeedbackComposeViewWithGeneratedScreenshot();
+			{
+				var manager = BITHockeyManager.SharedHockeyManager;
+				manager.FeedbackManager.ShowFeedbackComposeViewWithGeneratedScreenshot();
+			}
 		}
 	}
 }
