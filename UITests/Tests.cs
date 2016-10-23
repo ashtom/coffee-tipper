@@ -23,6 +23,11 @@ namespace CoffeeTip.UITests
             app = AppInitializer.StartApp(platform);
         }
 
+		[Test]
+		public void LaunchApp()
+		{
+			app.Screenshot("When I launch the app");
+		}
 
 
         [Test]
