@@ -10,16 +10,16 @@ namespace CoffeeTip.Droid
     [Activity(Label = "CoffeeTip.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : FormsAppCompatActivity
     {
-        protected override void OnCreate(Bundle bundle)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(bundle);
+            base.OnCreate(savedInstanceState);
 
-			string appID = "e5ca2bb9f63e44d89a6e3725c22e3417";
+			string appID = "4cdc7512267845729227f9b6e40bb7af";
 			CrashManager.Register(this, appID);
 			MetricsManager.Register(Application, appID);
 			UpdateManager.Register(this, appID);
 
-            global::Xamarin.Forms.Forms.Init(this, bundle);
+            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
             Xamarin.Forms.Forms.ViewInitialized += (sender,  e) => 
                 {
