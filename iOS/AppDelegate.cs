@@ -18,6 +18,9 @@ namespace CoffeeTip.iOS
         {
 			var manager = BITHockeyManager.SharedHockeyManager;
 			manager.Configure("3b8d05111ce247f996fc2edd523c52a3");
+#if (!DEBUG)
+			manager.DisableUpdateManager = true;
+#endif
 			manager.StartManager();
 			manager.Authenticator.AuthenticateInstallation();
 
