@@ -131,7 +131,7 @@
             </Grid>
             <Button 
                 StyleId="Reset"
-                BackgroundColor="#A40007"
+                BackgroundColor="#0000aa"
                 BorderRadius="0"
                 TextColor="White" 
                 Text="Reset"
