@@ -47,7 +47,7 @@
     <CodesignProvision>Automatic:InHouse</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
-    <DebugType>full</DebugType>
+    <DebugType></DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
@@ -143,14 +143,4 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
-  <PropertyGroup>
-    <CreateIpaDependsOn>
-      $(CreateIpaDependsOn);
-      CopyIpa
-    </CreateIpaDependsOn>
-  </PropertyGroup>
-
-  <Target Name="CopyIpa" Condition="'$(OutputType)' == 'Exe'&#xA;      And '$(ComputedPlatform)' == 'iPhone'&#xA;      And '$(BuildIpa)' == 'true'">
-    <Copy SourceFiles="$(IpaPackagePath)" DestinationFolder="$(OutputPath)" />
-  </Target>
 </Project>
